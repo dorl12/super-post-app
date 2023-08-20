@@ -1,0 +1,1 @@
+export { FilterChipsBar } from "./FilterChipsBar";

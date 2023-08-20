@@ -1,0 +1,44 @@
+.filter-options {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 265px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.filter-options .search-bar-instance {
+  background-color: #ffffff !important;
+  border: unset !important;
+  border-color: unset !important;
+  box-shadow: 0px 0px 21px #336df526 !important;
+  flex: 0 0 auto !important;
+}
+
+.filter-options .design-component-instance-node {
+  color: #a1aab2 !important;
+}
+
+.filter-options .search-bar-2 {
+  height: 23px !important;
+}
+
+.filter-options .search-bar-3 {
+  border: 2px solid !important;
+  border-color: #a2a2a2 !important;
+  border-radius: 9px/9.67px !important;
+}
+
+.filter-options .search-bar-4 {
+  width: 7px !important;
+}
+
+.filter-options .main-filter-options-instance {
+  flex: 0 0 auto !important;
+}
+
+.filter-options .filter-buttons-instance {
+  flex: 0 0 auto !important;
+  margin-bottom: -124px !important;
+}

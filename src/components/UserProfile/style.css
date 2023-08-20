@@ -1,0 +1,32 @@
+.user-profile {
+  align-items: center;
+  background-color: #e1e8ff78;
+  border-radius: 100px;
+  display: inline-flex;
+  gap: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 270px; 
+  left: 1244px;
+}
+
+.user-profile .avatar-rounded-image {
+  height: 72px;
+  margin-bottom: -15px;
+  margin-left: -15px;
+  margin-top: -15px;
+  position: relative;
+  width: 72px;
+}
+
+.user-profile .text-wrapper {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}

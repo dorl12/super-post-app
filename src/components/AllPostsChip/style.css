@@ -1,0 +1,39 @@
+.all-posts-chip {
+  align-items: center;
+  border-radius: 100px;
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px;
+  position: relative;
+  width: 106px;
+}
+
+.all-posts-chip .text-wrapper-10 {
+  font-family: "Inter", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+}
+
+.all-posts-chip.hover {
+  background-color: #4c6fff;
+}
+
+.all-posts-chip.default {
+  background-color: #e1e8ff;
+}
+
+.all-posts-chip.hover .text-wrapper-10 {
+  color: #ffffff;
+}
+
+.all-posts-chip.default .text-wrapper-10 {
+  color: #4c6fff;
+}

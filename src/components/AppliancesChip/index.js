@@ -1,0 +1,1 @@
+export { AppliancesChip } from "./AppliancesChip";

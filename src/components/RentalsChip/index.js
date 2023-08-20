@@ -1,0 +1,1 @@
+export { RentalsChip } from "./RentalsChip";

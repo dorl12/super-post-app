@@ -1,0 +1,227 @@
+.pop-up {
+  background-color: #ffffff;
+  border-radius: 8px;
+  height: 522px;
+  overflow: hidden;
+  position: relative;
+  width: 424px;
+}
+
+.pop-up .overlap-group {
+  height: 99px;
+  left: 29px;
+  position: absolute;
+  top: 0;
+  width: 395px;
+}
+
+.pop-up .header-options {
+  height: 69px;
+  left: 323px;
+  position: absolute;
+  top: 0;
+  width: 72px;
+}
+
+.pop-up .title-input {
+  align-items: center;
+  border: 1px solid;
+  border-color: #d9d9d9;
+  border-radius: 3px;
+  display: flex;
+  gap: 16px;
+  height: 20px;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  top: 67px;
+  width: 352px;
+}
+
+.pop-up .text-wrapper {
+  color: #a2a2a2;
+  font-family: "Inter", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 9.6px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.pop-up .done-button {
+  align-items: center;
+  background-color: #4c6fff;
+  border-radius: 100px;
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+  left: 335px;
+  padding: 12px 16px;
+  position: absolute;
+  top: 471px;
+}
+
+.pop-up .div {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 9.6px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.pop-up .location-input {
+  align-items: center;
+  border: 1px solid;
+  border-color: #d9d9d9;
+  border-radius: 3px;
+  display: flex;
+  gap: 16px;
+  height: 20px;
+  left: 29px;
+  padding: 10px;
+  position: absolute;
+  top: 119px;
+  width: 352px;
+}
+
+.pop-up .date-category-inputs {
+  align-items: flex-start;
+  display: flex;
+  gap: 12px;
+  left: 29px;
+  position: absolute;
+  top: 171px;
+  width: 373px;
+}
+
+.pop-up .category-input {
+  align-items: center;
+  border: 1px solid;
+  border-color: #d9d9d9;
+  border-radius: 3px;
+  display: flex;
+  height: 20px;
+  justify-content: space-between;
+  padding: 10px;
+  position: relative;
+  width: 373px;
+}
+
+.pop-up .linear-arrows-alt {
+  height: 18px !important;
+  margin-bottom: -3px !important;
+  margin-top: -3px !important;
+  position: relative !important;
+  width: 18px !important;
+}
+
+.pop-up .frame {
+  align-items: center;
+  border: 1px dashed;
+  border-color: #d9d9d9;
+  border-radius: 3px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 1px;
+  left: 29px;
+  padding: 14px 0px;
+  position: absolute;
+  top: 232px;
+}
+
+.pop-up .frame-2 {
+  align-items: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  position: relative;
+  width: 372px;
+}
+
+.pop-up .text-wrapper-2 {
+  color: #4c6fff;
+  font-family: "Inter", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  height: 22px;
+  letter-spacing: 0;
+  line-height: 9.6px;
+  margin-top: 6px;
+  position: relative;
+  text-align: center;
+  width: 281px;
+}
+
+.pop-up .icons-operations-data-upload {
+  background-image: url(https://generation-sessions.s3.amazonaws.com/90a65aacb9c3c986b76dad859ee48d06/img/shape-2.svg) !important;
+  height: 12px !important;
+  left: 91px !important;
+  position: absolute !important;
+  top: 5px !important;
+  width: 12px !important;
+}
+
+.pop-up .or-drag-drop-a-file {
+  color: var(--neutraln-60);
+  font-family: "Lato", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 21px;
+  letter-spacing: 0.5px;
+  line-height: 16px;
+  position: relative;
+  width: 167px;
+  top: -8px;
+}
+
+.pop-up .description-input {
+  align-items: flex-start;
+  border: 1px solid;
+  border-color: #d9d9d9;
+  border-radius: 3px;
+  display: flex;
+  gap: 16px;
+  height: 80px;
+  left: 29px;
+  padding: 10px;
+  position: absolute;
+  top: 356px;
+  width: 352px;
+}
+
+.pop-up .text-wrapper-3 {
+  color: #a2a2a2;
+  font-family: "Inter", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 9.6px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.pop-up .title-input-box,
+.pop-up .location-input-box,
+.pop-up .description-input-box {
+  outline: none;
+  border: none;
+}
+
+.pop-up .description-input-box {
+  flex: 1; /* Fill available width */
+  outline: none;
+  border: none;
+  resize: none;
+}

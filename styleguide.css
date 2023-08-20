@@ -1,0 +1,18 @@
+:root {
+  --button-base-font-family: "Inter-SemiBold", Helvetica;
+  --button-base-font-size: 12px;
+  --button-base-font-style: normal;
+  --button-base-font-weight: 600;
+  --button-base-letter-spacing: 0px;
+  --button-base-line-height: 12px;
+  --dark-blue: rgba(43, 63, 108, 1);
+  --input-base-font-family: "Inter-Medium", Helvetica;
+  --input-base-font-size: 13px;
+  --input-base-font-style: normal;
+  --input-base-font-weight: 500;
+  --input-base-letter-spacing: 0px;
+  --input-base-line-height: 13px;
+  --themeprimarydefault: rgba(76, 111, 255, 1);
+  --themeprimarysoft: rgba(225, 232, 255, 1);
+  --themewhitedefault: rgba(255, 255, 255, 1);
+}

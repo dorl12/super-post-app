@@ -1,0 +1,39 @@
+.rentals-chip {
+  align-items: center;
+  border-radius: 100px;
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px;
+  position: relative;
+  width: 95px;
+}
+
+.rentals-chip .text-wrapper-12 {
+  font-family: "Inter", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+}
+
+.rentals-chip.property-1-2-hover {
+  background-color: #4c6fff;
+}
+
+.rentals-chip.property-1-2-default {
+  background-color: #e1e8ff;
+}
+
+.rentals-chip.property-1-2-hover .text-wrapper-12 {
+  color: #ffffff;
+}
+
+.rentals-chip.property-1-2-default .text-wrapper-12 {
+  color: #4c6fff;
+}

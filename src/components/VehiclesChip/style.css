@@ -1,0 +1,39 @@
+.vehicles-chip {
+  align-items: center;
+  border-radius: 100px;
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px;
+  position: relative;
+  width: 103px;
+}
+
+.vehicles-chip .text-wrapper-11 {
+  font-family: "Inter", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+}
+
+.vehicles-chip.property-1-0-hover {
+  background-color: #4c6fff;
+}
+
+.vehicles-chip.property-1-0-default {
+  background-color: #e1e8ff;
+}
+
+.vehicles-chip.property-1-0-hover .text-wrapper-11 {
+  color: #ffffff;
+}
+
+.vehicles-chip.property-1-0-default .text-wrapper-11 {
+  color: #4c6fff;
+}

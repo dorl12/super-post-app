@@ -1,0 +1,1 @@
+export { CollectivePosts } from "./CollectivePosts";

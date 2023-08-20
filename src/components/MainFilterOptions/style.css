@@ -1,0 +1,135 @@
+.main-filter-options {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 1093px;
+}
+
+.main-filter-options .car {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  height: 99px;
+  justify-content: center;
+  position: relative;
+}
+
+.main-filter-options .linear-transport {
+  height: 65px !important;
+  margin-top: -3.5px !important;
+  position: relative !important;
+  width: 65px !important;
+}
+
+.main-filter-options .div {
+  color: #4c6fff;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  height: 25px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -2.5px;
+  position: relative;
+  text-align: center;
+  width: 88px;
+}
+
+.main-filter-options .rentals-button {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  padding: 16px;
+  position: relative;
+}
+
+.main-filter-options .linear-building {
+  height: 73px !important;
+  position: relative !important;
+  width: 73px !important;
+}
+
+.main-filter-options .text-wrapper-2 {
+  color: #4c6fff;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  height: 34px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  width: 77px;
+}
+
+.main-filter-options .furniture-button {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  padding: 16px;
+  position: relative;
+}
+
+.main-filter-options .linear-home {
+  height: 80px !important;
+  position: relative !important;
+  width: 80px !important;
+}
+
+.main-filter-options .text-wrapper-3 {
+  color: #4c6fff;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  height: 34px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  width: 87px;
+}
+
+.main-filter-options .div-2 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+  padding: 16px;
+  position: relative;
+}
+
+.main-filter-options .linear-electronic {
+  height: 75px !important;
+  position: relative !important;
+  width: 75px !important;
+}
+
+.main-filter-options .text-wrapper-4 {
+  color: #4c6fff;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  height: 34px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  width: 109px;
+}
+
+.main-filter-options .linear-home-furniture-washing-machine-minimalistic-2 {
+  height: 74px !important;
+  position: relative !important;
+  width: 74px !important;
+}

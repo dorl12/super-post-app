@@ -1,0 +1,1 @@
+export { VehiclesChip } from "./VehiclesChip";

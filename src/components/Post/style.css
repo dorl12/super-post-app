@@ -1,0 +1,259 @@
+.post {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 24px 7px #00000026;
+  height: 493px;
+  overflow: hidden;
+  position: relative;
+  width: 364px;
+}
+
+.post .image-rounded {
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 200px;
+  left: 8px;
+  position: absolute;
+  top: 9px;
+  width: 347px;
+  border-radius: 10px;
+}
+
+.post .input-group {
+  -webkit-backdrop-filter: blur(10px) brightness(100%);
+  backdrop-filter: blur(10px) brightness(100%);
+  background-color: #edf2f7;
+  border-radius: 10px;
+  height: 51px;
+  left: 9px;
+  position: absolute;
+  top: 431px;
+  width: 346px;
+}
+
+.post .text-wrapper-5 {
+  color: #a1aab2;
+  font-family: var(--input-base-font-family);
+  font-size: var(--input-base-font-size);
+  font-style: var(--input-base-font-style);
+  font-weight: var(--input-base-font-weight);
+  left: 16px;
+  letter-spacing: var(--input-base-letter-spacing);
+  line-height: var(--input-base-line-height);
+  position: absolute;
+  top: 18px;
+  white-space: nowrap;
+  width: 142px;
+}
+
+.post .linear-messages {
+  height: 24px !important;
+  left: 306px !important;
+  position: absolute !important;
+  top: 13px !important;
+  width: 24px !important;
+}
+
+.post .overlap-group-2 {
+  height: 179px;
+  left: 0;
+  position: absolute;
+  top: 215px;
+  width: 357px;
+}
+
+.post .avatar-rounded-image {
+  height: 72px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 66px;
+}
+
+.post .content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  left: 62px;
+  position: absolute;
+  top: 18px;
+  width: 295px;
+}
+
+.post .div-3 {
+  align-items: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
+  width: 295px;
+}
+
+.post .text-wrapper-6 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  height: 21px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: 143px;
+}
+
+.post .div-4 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  position: relative;
+}
+
+.post .icon-clock {
+  height: 12px;
+  position: relative;
+  width: 12px;
+}
+
+.post .text-wrapper-7 {
+  color: #a2a2a2;
+  font-family: "Inter", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  height: 19px;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 73px;
+}
+
+.post .linear-map-location {
+  height: 15px !important;
+  position: relative !important;
+  width: 15px !important;
+}
+
+.post .text-wrapper-8 {
+  color: #a2a2a2;
+  font-family: "Inter", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  height: 19px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 3px;
+  position: relative;
+  width: 87px;
+}
+
+.post .description-content {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.post .category-chip {
+  align-items: center;
+  background-color: #e1e8ff;
+  border-radius: 6px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 5px;
+  padding: 4px 8px;
+  position: relative;
+}
+
+.post .linear-home-furniture-armchair-2-9 {
+  height: 20px !important;
+  position: relative !important;
+  width: 20px !important;
+}
+
+.post .category-text {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.post .text-wrapper-9 {
+  color: #4c6fff;
+  font-family: "Inter", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.post .p {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 300;
+  height: 38px;
+  letter-spacing: 0;
+  line-height: 22.5px;
+  margin-top: -2px;
+  position: relative;
+  width: 288px;
+}
+
+.post .frame {
+  align-items: flex-end;
+  display: inline-flex;
+  gap: 10px;
+  left: 312px;
+  position: absolute;
+  top: 19px;
+}
+
+.post .linear-essentional {
+  height: 17px !important;
+  position: relative !important;
+  width: 17px !important;
+}
+
+.post .linear-messages-conversation-pen-new-square-8 {
+  height: 16px !important;
+  position: relative !important;
+  width: 16px !important;
+}
+
+.bin-button {
+  background-color: transparent;
+  padding: 5px; /* Adjust the padding to control the size of the icon */
+  border: none; /* Remove the border */
+  margin-top: -2px;
+  margin-left: -10px;
+}
+
+.bin-button:hover {
+  background-color: transparent; /* No color change on hover */
+}
+
+.edit-button {
+  background-color: transparent;
+  padding: 5px; /* Adjust the padding to control the size of the icon */
+  border: none; /* Remove the border */
+  margin-top: -2px;
+  margin-left: -10px;
+}
+
+.edit-button:hover {
+  background-color: transparent; /* No color change on hover */
+}
