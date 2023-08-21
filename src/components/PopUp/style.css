@@ -225,3 +225,9 @@
   border: none;
   resize: none;
 }
+
+.pop-up .category-dropdown {
+  outline: none;
+  border: none;
+  width: 350px;
+}

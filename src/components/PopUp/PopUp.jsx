@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { LinearArrowsAltArrowDown2 } from "../../icons/LinearArrowsAltArrowDown2";
 import { IconsOperations } from "../IconsOperations";
 import "./style.css";
@@ -9,11 +9,13 @@ export const PopUp = ({
   headerOptions = "https://generation-sessions.s3.amazonaws.com/90a65aacb9c3c986b76dad859ee48d06/img/header-options.svg",
   onClose,
   onDoneClick, // Add this prop
+  postId,
 }) => {
-  const [title, setTitle] = useState("");
-  const [location, setLocation] = useState("");
-  const [category, setCategory] = useState("");
-  const [description, setDescription] = useState("");
+  const [Id, setId] = useState("");
+  const [Title, setTitle] = useState("");
+  const [Location, setLocation] = useState("");
+  const [Category, setCategory] = useState("");
+  const [Description, setDescription] = useState("");
   const [uploadedFile, setUploadedFile] = useState(null);
 
   const handleCategoryChange = (event) => {
@@ -27,15 +29,32 @@ export const PopUp = ({
 
   const handleDoneClick = () => {
     const newPost = {
-      title,
-      location,
-      category,
-      description,
-      picture: uploadedFile ? URL.createObjectURL(uploadedFile) : null,
+      Title,
+      Location,
+      Category,
+      Description,
+      Picture: uploadedFile ? URL.createObjectURL(uploadedFile) : null,
     };
   
     if (onDoneClick) {
       onDoneClick(newPost); // Call the callback to send the new post data
+      onClose();
+    }
+  };
+
+  const handleDoneClickEdit = () => {
+    const EditedPost = {
+      Id,
+      Title,
+      Location,
+      Category,
+      Description,
+      Picture: uploadedFile ? URL.createObjectURL(uploadedFile) : null,
+    };
+  
+    if (onDoneClick) {
+      EditedPost.Id = postId;
+      onDoneClick(EditedPost); // Call the callback to send the new post data
       onClose();
     }
   };
@@ -59,20 +78,20 @@ export const PopUp = ({
           <input
             type="text"
             className="title-input-box"
-            value={title}
+            value={Title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Title"
           />
         </div>
       </div>
       <div className="done-button">
-        <div className="div" onClick={handleDoneClick}>Done</div>
+        <div className="div" onClick={handleDoneClickEdit}>Done</div>
       </div>
       <div className="location-input">
         <input
           type="text"
           className="location-input-box"
-          value={location}
+          value={Location}
           onChange={(e) => setLocation(e.target.value)}
           placeholder="Location"
         />
@@ -80,7 +99,8 @@ export const PopUp = ({
       <div className="date-category-inputs">
         <div className="category-input">
           <select
-            value={category}
+            className="category-dropdown"
+            value={Category}
             onChange={handleCategoryChange}
           >
             <option value="">Select a category</option>
@@ -90,7 +110,6 @@ export const PopUp = ({
             <option value="Electronics">Electronics</option>
             <option value="Appliances">Appliances</option>
           </select>
-          <LinearArrowsAltArrowDown2 className="linear-arrows-alt" color="#4C6FFF" />
         </div>
       </div>
       <div className="frame">
@@ -108,7 +127,7 @@ export const PopUp = ({
       </div>
       <div className="description-input">
         <textarea
-          value={description}
+          value={Description}
           className="description-input-box"
           onChange={(e) => setDescription(e.target.value)}
           placeholder="Write a description..."

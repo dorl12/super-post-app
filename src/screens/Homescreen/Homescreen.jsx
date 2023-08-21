@@ -10,6 +10,8 @@ import "./style.css";
 export const Homescreen = () => {
   const [posts, setPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]); // State for filtered posts
+  const [editPost, setEditPost] = useState(null);
+  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
 
   useEffect(() => {
     // Fetch data from the API
@@ -27,7 +29,6 @@ export const Homescreen = () => {
   }, []);
 
   const handleDelete = (postId) => {
-    console.log('Deleting post with ID:', postId);
     fetch(`https://localhost:7007/api/Posts/${postId}`, {
       method: 'DELETE',
     })
@@ -74,6 +75,65 @@ export const Homescreen = () => {
       });
   };
 
+  const handleEditDone = (updatedPost) => {
+    const postIndex = posts.findIndex(post => post.id === updatedPost.Id);
+    const originalPost = posts[postIndex];
+    
+    if (postIndex !== -1) {
+      const emptyFields = [];
+      
+      Object.keys(updatedPost).forEach(field => {
+        if (updatedPost[field] === "") {
+          emptyFields.push(field);
+        }
+      });
+
+      const capitalizedOriginal = {};
+
+      for (const key in originalPost) {
+        if (originalPost.hasOwnProperty(key)) {
+          const capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
+          capitalizedOriginal[capitalizedKey] = originalPost[key];
+        }
+      }
+  
+      // Iterate through the properties of the source object
+      Object.keys(capitalizedOriginal).forEach(property => {
+      // Check if the destination object has the same property
+      if (updatedPost.hasOwnProperty(property) && (updatedPost[property] === "" || updatedPost[property] === null)) {
+      // Copy the value from the source object to the destination object
+      updatedPost[property] = capitalizedOriginal[property];
+      }
+      });
+      
+      fetch(`https://localhost:7007/api/Posts/${updatedPost.Id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedPost),
+      })
+      .then(response => {
+        if (response.status === 204) {
+          fetch("https://localhost:7007/api/Posts", {
+            method: 'GET',
+          })
+            .then(response => response.json())
+            .then(data => {
+              setPosts(data);
+              setFilteredPosts(data); // Initialize filtered posts with all posts
+            })
+            .catch(error => {
+              console.error("Error fetching data:", error);
+            });
+        }
+      })
+      .catch(error => {
+        console.error("Error updating post:", error);
+      });
+    }
+  };
+  
   const groupedPosts = [];
   for (let i = 0; i < posts.length; i += 3) {
     groupedPosts.push(posts.slice(i, i + 3));
@@ -118,6 +178,8 @@ export const Homescreen = () => {
                     description={post.description}
                     date={post.date}
                     onDelete={() => handleDelete(post.id)}
+                    onEditDone={handleEditDone} // Pass setEditPost here
+                    id={post.id}
                   />
                 </div>
               ))}

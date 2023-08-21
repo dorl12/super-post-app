@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 import { IconButton } from "rsuite";
+import Popup from "reactjs-popup";
+import { PopUp } from "../PopUp";
 import { LinearEssentionalUiTrashBin314 } from "../../icons/LinearEssentionalUiTrashBin314";
 import { LinearHomeFurnitureArmchair29 } from "../../icons/LinearHomeFurnitureArmchair29";
 import { LinearMapLocationMapPoint16 } from "../../icons/LinearMapLocationMapPoint16";
@@ -17,8 +19,13 @@ export const Post = ({
   picture,
   description,
   date,
-  onDelete, // Add onDelete prop
+  onDelete,
+  onEditDone,
+  id,
 }) => {
+
+  const [popupOpen, setPopupOpen] = useState(false);
+
   return (
     <div className="post">
       <img className="image-rounded" alt="Post picture" src={picture} />
@@ -54,7 +61,22 @@ export const Post = ({
         </div>
         <div className="frame">
           <IconButton className="bin-button" icon={<LinearEssentionalUiTrashBin314 />} onClick={() => onDelete()}></IconButton>
-          <IconButton className="edit-button" icon={<LinearMessagesConversationPenNewSquare3 />} onClick={() => console.log('Button clicked!')}></IconButton>
+          <IconButton className="edit-button" icon={<LinearMessagesConversationPenNewSquare3 />} onClick={() => setPopupOpen(true)}></IconButton>
+          {popupOpen && <div className="overlay" onClick={() => setPopupOpen(false)} />}
+          <Popup
+          open={popupOpen}
+          onClose={() => setPopupOpen(false)}
+          modal
+          closeOnDocumentClick={false}
+        >
+          {close => (
+            <PopUp
+              onClose={close}
+              onDoneClick={onEditDone} // Pass the callback function
+              postId={id}
+            />
+          )}
+        </Popup>
         </div>
       </div>
     </div>
@@ -71,4 +93,6 @@ Post.propTypes = {
   description: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   onDelete: PropTypes.func.isRequired, // Add onDelete prop type
+  onEditDone: PropTypes.func.isRequired, // Add onEdit prop type
+  id: PropTypes.number,
 };
