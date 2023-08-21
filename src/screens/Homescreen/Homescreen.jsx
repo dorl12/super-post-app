@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import superPostImage from '../../images/SuperPostLogo.jpeg';
 import { Post } from "../../components/Post";
 import { CreateNewPost } from "../../components/CreateNewPost";
 import { FilterChipsBar } from "../../components/FilterChipsBar";
@@ -149,7 +150,7 @@ export const Homescreen = () => {
             searchBarLine="https://generation-sessions.s3.amazonaws.com/22cd7392761006b09fe9c0427e90574f/img/line-2.svg"
             onLocationFilter={handleLocationFilter} // Pass the location filter function to FilterOptions
           />
-          <div className="text-wrapper-16">SuperPost</div>
+          <img src={superPostImage} alt="logo" className="super-post-logo"/>
         </div>
         <div><UserProfile className="user-profile-instance" /></div>
         <div className="post-header">

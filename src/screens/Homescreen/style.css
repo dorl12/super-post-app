@@ -7,9 +7,8 @@
 }
 
 .homescreen .homescreen-v {
-  background-color: #ffffff;
+  background-color: #f4f4f8;
   border: 1px none;
-  height: 3288px;
   overflow: hidden;
   position: relative;
   width: 1440px;
@@ -24,7 +23,6 @@
 }
 
 .homescreen .banner {
-  background-color: #4c6fff;
   height: 240px;
   left: 0;
   position: absolute;
@@ -200,5 +198,14 @@
   justify-content: center;
   min-height: 100vh;
   margin-top: 950px;
+}
+
+.super-post-logo {
+  margin-top: 160px;
+  margin-left: 300px;
+}
+
+.user-profile-instance {
+  margin-top: -240px;
 }
 
