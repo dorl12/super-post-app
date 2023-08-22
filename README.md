@@ -1,7 +1,8 @@
 # Welcome to Super Post!
 
-Your new favorite posts system. With Super Post you can log in to your own user and chat with an UNLIMITED number of interesting people.
-
+Your new favorite posts system.<br /> 
+Using Super Post you can:<br /> log in to your own user and chat with an UNLIMITED number of interesting people.
+* hello
 ## Instructions:
 
 Clone the code.<br />
