@@ -13,5 +13,5 @@ Clone the code.<br />
 Open with Android Studio code.<br />
 Run the program using `npm start`.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.<br />
-In order to run the full Super Post app, please run this React client and the REST API server.
-![alt text]("C:\Users\Dor Levi\Downloads\WhatsApp Image 2023-08-21 at 22.36.58.jpeg")
+In order to run the full Super Post app, please run this React client and the REST API server.<br />
+![alt text]("https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg")
