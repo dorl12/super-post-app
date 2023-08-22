@@ -1,7 +1,7 @@
 # Welcome to Super Post!
 
 Your new favorite posts system.<br /> 
-Using Super Post you can:<br /> log in to your own user and chat with an UNLIMITED number of interesting people.
+Using Super Post you can:<br />
 * Get access to all of the current posts.
 * Create a new post.
 * Edit a post that you have created.
