@@ -1,6 +1,6 @@
 # Welcome to Super Post!
 
-Your new favorite posts system.<br /> <br /> 
+Your new favorite posts system.<br />
 Using Super Post you can:<br />
 * Get access to all of the current posts.
 * Create a new post.
