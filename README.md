@@ -14,3 +14,6 @@ Open with Android Studio code.<br />
 Run the program using `npm start`.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.<br />
 In order to run the full Super Post app, please run this React client and the REST API server.<br /><br />
+![Image Alt Text]([image_url](https://github.com/dorl12/super-post-app/assets/83288357/d8fe8b82-44e0-42fa-bde4-e5c3838b2250)https://github.com/dorl12/super-post-app/assets/83288357/d8fe8b82-44e0-42fa-bde4-e5c3838b2250)
+![Image Alt Text]([image_url](https://github.com/dorl12/super-post-app/assets/83288357/3efdade9-aa6b-44df-850c-546cb897642a)https://github.com/dorl12/super-post-app/assets/83288357/3efdade9-aa6b-44df-850c-546cb897642a)
+
