@@ -1,8 +1,3 @@
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/
-
 import PropTypes from "prop-types";
 import React from "react";
 import { FilterButtons } from "../FilterButtons";
@@ -13,12 +8,9 @@ import "./style.css";
 export const FilterOptions = ({
   className,
   searchBarLine,
-  onLocationFilter, // Add the onLocationFilter prop
+  onLocationFilter,
 }) => {
-  const handleLocationChange = (event) => {
-    const location = event.target.value;
-    onLocationFilter(location); // Call the location filter function with the input value
-  };
+
   return (
     <div className={`filter-options ${className}`}>
       <SearchBar
@@ -28,7 +20,7 @@ export const FilterOptions = ({
         line={searchBarLine}
         lineClassName="search-bar-4"
         overlapGroupClassName="search-bar-2"
-        onChange={handleLocationChange} // Pass the location change handler to SearchBar
+        onLocationFilter={onLocationFilter}
       />
       <MainFilterOptions className="main-filter-options-instance" />
       <FilterButtons className="filter-buttons-instance" />

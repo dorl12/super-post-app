@@ -9,10 +9,9 @@ import { LinearMapLocationMapPoint5 } from "../../icons/LinearMapLocationMapPoin
 import "./style.css";
 
 export const Homescreen = () => {
+
   const [posts, setPosts] = useState([]);
-  const [filteredPosts, setFilteredPosts] = useState([]); // State for filtered posts
-  const [editPost, setEditPost] = useState(null);
-  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
+  const [filteredPosts, setFilteredPosts] = useState([]);
 
   useEffect(() => {
     // Fetch data from the API
@@ -22,41 +21,12 @@ export const Homescreen = () => {
       .then(response => response.json())
       .then(data => {
         setPosts(data);
-        setFilteredPosts(data); // Initialize filtered posts with all posts
+        setFilteredPosts(data);
       })
       .catch(error => {
         console.error("Error fetching data:", error);
       });
   }, []);
-
-  const handleDelete = (postId) => {
-    fetch(`https://localhost:7007/api/Posts/${postId}`, {
-      method: 'DELETE',
-    })
-      .then(response => {
-        if (response.status === 204) {
-          // Remove the deleted post from the state
-          const updatedPosts = posts.filter(post => post.id !== postId);
-          const updatedFilteredPosts = filteredPosts.filter(post => post.id !== postId);
-          setPosts(updatedPosts);
-          setFilteredPosts(updatedFilteredPosts);
-        }
-      })
-      .catch(error => {
-        console.error("Error deleting post:", error);
-      });
-  };
-  
-
-  // Function to filter posts based on location
-  const handleLocationFilter = (location) => {
-    if (location) {
-      const filtered = posts.filter(post => post.location.toLowerCase() === location.toLowerCase());
-      setFilteredPosts(filtered);
-    } else {
-      setFilteredPosts(posts);
-    }
-  };
 
   const handleDoneClick = (newPost) => {
     fetch("https://localhost:7007/api/Posts", {
@@ -98,11 +68,10 @@ export const Homescreen = () => {
         }
       }
   
-      // Iterate through the properties of the source object
       Object.keys(capitalizedOriginal).forEach(property => {
-      // Check if the destination object has the same property
+      
       if (updatedPost.hasOwnProperty(property) && (updatedPost[property] === "" || updatedPost[property] === null)) {
-      // Copy the value from the source object to the destination object
+      
       updatedPost[property] = capitalizedOriginal[property];
       }
       });
@@ -122,7 +91,7 @@ export const Homescreen = () => {
             .then(response => response.json())
             .then(data => {
               setPosts(data);
-              setFilteredPosts(data); // Initialize filtered posts with all posts
+              setFilteredPosts(data);
             })
             .catch(error => {
               console.error("Error fetching data:", error);
@@ -134,10 +103,40 @@ export const Homescreen = () => {
       });
     }
   };
+
+  const handleDelete = (postId) => {
+    fetch(`https://localhost:7007/api/Posts/${postId}`, {
+      method: 'DELETE',
+    })
+      .then(response => {
+        if (response.status === 204) {
+          // Remove the deleted post from the state
+          const updatedPosts = posts.filter(post => post.id !== postId);
+          const updatedFilteredPosts = filteredPosts.filter(post => post.id !== postId);
+          setPosts(updatedPosts);
+          setFilteredPosts(updatedFilteredPosts);
+        }
+      })
+      .catch(error => {
+        console.error("Error deleting post:", error);
+      });
+  };
   
+  // Function to filter posts based on location
+  const handleLocationFilter = (location) => {
+    if (location) {
+      const filtered = posts.filter(post => post.location.toLowerCase() === location.toLowerCase());
+      setFilteredPosts(filtered);
+    } else {
+      setFilteredPosts(posts);
+    }
+  };
+
   const groupedPosts = [];
-  for (let i = 0; i < posts.length; i += 3) {
-    groupedPosts.push(posts.slice(i, i + 3));
+  const postsToUse = filteredPosts.length > 0 ? filteredPosts : posts;
+
+  for (let i = 0; i < postsToUse.length; i += 3) {
+    groupedPosts.push(postsToUse.slice(i, i + 3));
   }
 
   return (
@@ -148,7 +147,7 @@ export const Homescreen = () => {
           <FilterOptions
             className="filter-options-instance"
             searchBarLine="https://generation-sessions.s3.amazonaws.com/22cd7392761006b09fe9c0427e90574f/img/line-2.svg"
-            onLocationFilter={handleLocationFilter} // Pass the location filter function to FilterOptions
+            onLocationFilter={handleLocationFilter}
           />
           <img src={superPostImage} alt="logo" className="super-post-logo"/>
         </div>
@@ -179,7 +178,7 @@ export const Homescreen = () => {
                     description={post.description}
                     date={post.date}
                     onDelete={() => handleDelete(post.id)}
-                    onEditDone={handleEditDone} // Pass setEditPost here
+                    onEditDone={handleEditDone}
                     id={post.id}
                   />
                 </div>

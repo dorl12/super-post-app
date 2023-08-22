@@ -1,13 +1,26 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { LinearSearchMagnifer } from "../../icons/LinearSearchMagnifer";
 
 export const SearchBar = ({
   className,
   divClassName,
-  onChange, // Add the onChange prop for handling search input changes
+  onLocationFilter,
 }) => {
+  
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleLocationChange = (event) => {
+    setSearchValue(event.target.value);
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      onLocationFilter(searchValue);
+    }
+  };
+
   return (
     <div className={`search-bar ${className}`}>
       <div className={`input-wrapper ${divClassName}`}>
@@ -15,7 +28,8 @@ export const SearchBar = ({
           type="text"
           className="search-input"
           placeholder="Search by location..."
-          onChange={onChange} // Attach the onChange event to the input element
+          onChange={handleLocationChange}
+          onKeyPress={handleKeyPress}
         />
       </div>
       <div className="iconex-light-search">
@@ -30,4 +44,3 @@ export const SearchBar = ({
 SearchBar.propTypes = {
   line: PropTypes.string,
 };
-

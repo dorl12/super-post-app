@@ -8,7 +8,22 @@ import { LinearHomeFurnitureArmchair29 } from "../../icons/LinearHomeFurnitureAr
 import { LinearMapLocationMapPoint16 } from "../../icons/LinearMapLocationMapPoint16";
 import { LinearMessagesConversationPenNewSquare3 } from "../../icons/LinearMessagesConversationPenNewSquare3";
 import { LinearMessagesConversationPlain15 } from "../../icons/LinearMessagesConversationPlain15";
+
+import { LinearBuildingInfrastructureHome1 } from "../../icons/LinearBuildingInfrastructureHome1";
+import { LinearElectronicDevicesLaptop2 } from "../../icons/LinearElectronicDevicesLaptop2";
+import { LinearHomeFurnitureArmchair26 } from "../../icons/LinearHomeFurnitureArmchair26";
+import { LinearHomeFurnitureWashingMachineMinimalistic2 } from "../../icons/LinearHomeFurnitureWashingMachineMinimalistic2";
+import { LinearTransportPartsServiceBus } from "../../icons/LinearTransportPartsServiceBus";
 import "./style.css";
+
+// Create a mapping of category names to icon components
+const categoryIcons = {
+  Vehicles: LinearTransportPartsServiceBus,
+  Rentals: LinearBuildingInfrastructureHome1,
+  Furniture: LinearHomeFurnitureArmchair26,
+  Electronics: LinearElectronicDevicesLaptop2,
+  Appliances: LinearHomeFurnitureWashingMachineMinimalistic2,
+};
 
 export const Post = ({
   avatarRoundedImage="https://generation-sessions.s3.amazonaws.com/bf8fb1a460406ac60f67d0ee21076541/img/avatar-rounded-image-17@2x.png",
@@ -25,6 +40,8 @@ export const Post = ({
 }) => {
 
   const [popupOpen, setPopupOpen] = useState(false);
+
+  const IconComponent = categoryIcons[category];
 
   return (
     <div className="post">
@@ -51,7 +68,7 @@ export const Post = ({
           </div>
           <div className="description-content">
             <div className="category-chip">
-              <LinearHomeFurnitureArmchair29 className="linear-home-furniture-armchair-2-9" />
+            {IconComponent && <IconComponent className="category-icon" />} {/* Render the icon */}
               <div className="category-text">
                 <div className="text-wrapper-9">{category}</div>
               </div>
